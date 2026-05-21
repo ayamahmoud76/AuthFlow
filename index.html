@@ -19,10 +19,12 @@
   </head>
   <body class="main-bg-color">
     <!-- login page  -->
-     <section class="main-bg-color py-5 d-block" id="login">
+  <div class="parent min-vh-100 d-flex justify-content-center align-items-center position-relative overflow-hidden">
+
+       <section class="main-bg-color py-5 d-block" id="login">
       <div class="container py-5">
-        <div class="d-flex align-items-center box-shadow py-4 flex-column mx-auto">
-          <h2 class="text-capitalize text-primary">smart login System</h2>
+        <div class="animate d-flex align-items-center box-shadow p-5 flex-column mx-auto bg-white rounded-4 shadow-lg">
+          <h2 class="text-capitalize mb-4 fs-3 text-primary text fw-bold">smart login System</h2>
           <form class="w-100">
             <div class="py-3">
               <input type="email" placeholder="Enter your email" class="form-control" id="logEmail">
@@ -31,7 +33,7 @@
               <input type="password" placeholder="Enter your password" class="form-control" id="logPassword">
             </div>
             <div>
-              <button class="btn btn-outline-info w-100 my-3" type="button" id="log">Login</button>
+              <button class="btn btn-outline-info fw-bold position-relative overflow-hidden text-white border-0 w-100 my-3 fs-6 rounded-3 px-4 py-3" type="button" id="log">Login</button>
             </div>
           </form>
           <p class="text-capitalize text-primary">
@@ -44,22 +46,23 @@
 
      <section class="main-bg-color py-5 d-none" id="signup">
   <div class="container py-5">
-    <div class="d-flex align-items-center box-shadow py-4 flex-column mx-auto">
-      <h2 class="text-capitalize text-primary">smart login System</h2>
+    <div class="animate d-flex align-items-center box-shadow p-5 flex-column mx-auto bg-white rounded-4 shadow-lg">
+      <h2 class="text-capitalize mb-4 fs-3 text-primary text fw-bold">smart login System</h2>
       <form class="w-100">
-        <div class="pt-3">
-          <input type="text" placeholder="Enter your name" class="form-control" id="name" name="name">
-          <p class="invisible m-0 p-0">write a correct name</p>
+        <div class="pt-2">
+          <input type="text" placeholder="Enter your name" class="form-control" oninput="validateForm(nameRgx, nameInput)" id="name" name="name">
+          <p class="invisible text-danger py-1 d-flex align-items-center gap-2">write a correct name</p>
         </div>
-        <div class="py-3">
-          <input type="email" placeholder="Enter your email" class="form-control" id="email" name="email">
-          <p class="invisible m-0 p-0">email is already sxists</p>
-        </div>
-        <div>
-          <input type="password" placeholder="Enter a valid password" class="form-control" id="password" name="password">
+        <div class="py-2">
+          <input type="email" placeholder="Enter your email" class="form-control" oninput="validateForm(emailRgx, emailInput)" id="email" name="email">
+          <p class="invisible text-danger mt-1 d-flex align-items-center gap-2">Invalid email</p>
         </div>
         <div>
-          <button class="btn btn-outline-info w-100 my-3" id="sign" type="button">sign up</button>
+          <input type="password" placeholder="Enter a valid password" class="form-control" oninput="validateForm(passwordRgx, passwordInput)" id="password" name="password">
+           <p class="invisible text-danger mt-1 d-flex align-items-center gap-2">Invalid password</p>
+        </div>
+        <div>
+          <button class="btn btn-outline-info fw-bold position-relative overflow-hidden text-white fs-6 rounded-3 border-0 w-100 my-2 px-4 py-3" id="sign" type="button">Signup</button>
         </div>
         <p class="text-primary text-capitalize"> have an account?
           <a href="#login" id="loginLink" >login</a>
@@ -68,6 +71,7 @@
     </div>
   </div>
 </section>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
