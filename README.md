@@ -10,4 +10,4 @@ a reponsive multi-page authentication interface login, signup, and home page
 -Responsive design for all devices
 -client-side form validation
 -clean and modern UI 
--Navigayion between login/signup/home
+-Navigation between login/signup/home
