@@ -11,3 +11,5 @@ a reponsive multi-page authentication interface login, signup, and home page
 -client-side form validation
 -clean and modern UI 
 -Navigation between login/signup/home
+## demo
+https://ayamahmoud76.github.io/AuthFlow/
